@@ -1,8 +1,3 @@
-" PDX quizor vimrc
-" Last edited Fri May 27 00:51:42 PDT 2016
-" NOTE: all of the commands can be researched by looking
-"  up documentation with :help <topic>
-
 filetype indent plugin on
 syntax on " turn on syntax highlighting
 set number " line numbers
@@ -31,23 +26,21 @@ set expandtab
 set smarttab
 set smartindent
 
-set mouse=c " disable use of mouse, set vim to command line mode
 
 "$ and ^ are stupid
 nnoremap B ^
 nnoremap E $
 
-"I like arrow keys
-" nonrecursive remap of arrow keys to disable them.
-"noremap <Up> <NOP>
-"noremap <Right> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-" nonrecursive remap of arrow keys insert mode to disable them.
-"inoremap <Up> <NOP>
-"inoremap <Right> <NOP>
-"inoremap <Down> <NOP>
-"inoremap <Left> <NOP>
+"remap jk to move visually 
+nnoremap j gj
+nnoremap k gk
+"remap tabnew 
+cnoreabbrev th :tabnext<CR>
+cnoreabbrev tl :tabprev<CR>
+cnoreabbrev tn :tabnew
+"i keep hitting W instead of w for saving
+nnoremap W w
+
 
 " save on refocus
 :au FocusLost * :wa " will complain on untitled and read-only buffers
