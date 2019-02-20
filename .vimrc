@@ -3,7 +3,8 @@ syntax on " turn on syntax highlighting
 set number " line numbers
 set ruler
 " set cursorline
-color desert " set color scheme to desert, more schemes in vim's color folder
+color dracula 
+"color desert 
 set background=dark
 
 " search options
@@ -25,6 +26,14 @@ set softtabstop=2
 set expandtab
 set smarttab
 set smartindent
+set splitright
+set splitbelow
+
+"remap split nav
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
 
 
 "$ and ^ are stupid
@@ -34,13 +43,15 @@ nnoremap E $
 "remap jk to move visually 
 nnoremap j gj
 nnoremap k gk
-"remap tabnew 
-cnoreabbrev th :tabnext<CR>
-cnoreabbrev tl :tabprev<CR>
-cnoreabbrev tn :tabnew
-"i keep hitting W instead of w for saving
-nnoremap W w
 
+"remap tabnew 
+cnoreabbrev th tabnext<CR>
+cnoreabbrev tl tabprev<CR>
+cnoreabbrev tn tabnew
+
+"remap resize
+cnoreabbrev rs vertical resize -15 
+cnoreabbrev rl vertical resize +15
 
 " save on refocus
 :au FocusLost * :wa " will complain on untitled and read-only buffers
