@@ -3,7 +3,8 @@ syntax on " turn on syntax highlighting
 set number " line numbers
 set ruler
 " set cursorline
-color dracula 
+color dracula
+color zellner 
 "color desert 
 set background=dark
 
