@@ -3,7 +3,6 @@ syntax on " turn on syntax highlighting
 set number " line numbers
 set ruler
 " set cursorline
-color dracula
 color zellner 
 "color desert 
 set background=dark
@@ -53,6 +52,14 @@ cnoreabbrev tn tabnew
 "remap resize
 cnoreabbrev rs vertical resize -15 
 cnoreabbrev rl vertical resize +15
+
+"we all know what this is for
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
 
 " save on refocus
 :au FocusLost * :wa " will complain on untitled and read-only buffers
